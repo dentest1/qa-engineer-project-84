@@ -39,7 +39,7 @@
   steps: |
     - Выбираем товар Tree Oil 30ml 
     - Проверяем на открывшейся странице наличие подробного описания и информации о товаре
-expected-result: |
+  expected-result: |
     Пользователь должен увидеть на открывшейся странице наличие подробного описания и информации о товаре
     (принадлежность к категории,цена со скидкой и без,рейтинг,наличие на складе)
 
@@ -60,7 +60,7 @@ expected-result: |
     - Нажать на кнопку Add to cart под товаром
     - Нажать на кнопку Cart в правом верхнем углу экрана
     - Проверяем наименования и количество добавленых товаров в корзине
-expected-result: |
+  expected-result: |
     Пользователь должен увидеть на странице корзины наличие добавленных в корзину товаров (Microsoft Surface Laptop 4,Brown Perfume,3D Embellishment Art Lamp)
     в количестве 1 штука каждый
     
@@ -72,13 +72,59 @@ expected-result: |
     Отключены антивирусные программы 
     Открыта главная страница сайта в браузере Google Chrome
   test-data: |
-   
   steps: |
     - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку "Performance insights"
     - Нажать на кнопку "Measure page load"
+    - В открывшемся графике найти значение LCP 
+    - Зафиксировать полученное значение LCP
+  expected-result: |
+    Полученное в ходе теста значение LCP не превышает оптимальное время загрузки 2.5 секунды 
+
+- summary: |
+    Успешная проверка безопасности сайта
+  requirement: |
+    Сайт должен быть безопасен для пользователя и защищать его данные
+  prerequisites: |
+    Открыта главная страница сайта в браузере Google Chrome
+  test-data: |
+  steps: |
+    - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
+    - Выбираем вкладку "Security"
+    - В открывшемся окне "Security overview" проверяем, что сайт использует протокол HTTPS
+    - В открывшемся окне "Security overview" проверяем, что сертификат безопасности действующий
 expected-result: |
-    Пользователь должен увидеть на открывшейся странице наличие подробного описания и информации о товаре
-    (принадлежность к категории,цена со скидкой и без,рейтинг,наличие на складе)
+    В окне "Security overview" должны увидеть надписи  This page is secure (valid HTTPS) 
+    Сертификат подтвержден и действующий (Sertificate - valid and trusted)
+    
+- summary: |
+    Успешная оптимизации сайта для мобильных устройств
+  requirement: |
+    Сайт должен иметь версию, оптимизированную для мобильных устройств
+  prerequisites: |
+    Открыт браузер Google Chrome
+    В браузере открыт инструмент Mobile-Friendly Test (https://www.experte.com/mobile-friendly)
+  test-data: |
+    URL тестируемого сайта https://hexlet-products-store.vercel.app/
+  steps:
+    - Вводим в строке "Enter URL" URL сайта https://hexlet-products-store.vercel.app/
+    - Нажать кнопку "Start Test"
+  expected-result: |
+   Результат теста должен быть - Mobile Friendly 
+   
+- summary: |
+    Проверка совместимости сайта с последними версиями браузеров
+  requirement: |
+    Сайт должен иметь версию, оптимизированную для мобильных устройств
+  prerequisites: |
+    Открыт браузер Google Chrome
+    В браузере открыт инструмент Mobile-Friendly Test (https://www.experte.com/mobile-friendly)
+  test-data: |
+    URL тестируемого сайта https://hexlet-products-store.vercel.app/
+  steps:
+    - Вводим в строке "Enter URL" URL сайта https://hexlet-products-store.vercel.app/
+    - Нажать кнопку "Start Test"
+  expected-result: |
+   Результат теста должен быть - Mobile Friendly 
 
 
