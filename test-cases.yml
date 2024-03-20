@@ -82,7 +82,7 @@
     Полученное в ходе теста значение LCP не превышает оптимальное время загрузки 2.5 секунды 
 
 - summary: |
-    Успешная проверка безопасности сайта
+  проверка безопасности сайта
   requirement: |
     Сайт должен быть безопасен для пользователя и защищать его данные
   prerequisites: |
@@ -115,16 +115,19 @@ expected-result: |
 - summary: |
     Проверка совместимости сайта с последними версиями браузеров
   requirement: |
-    Сайт должен иметь версию, оптимизированную для мобильных устройств
+    Сайт должен быть совместим с последними версиями браузеров для Windows и Mac
   prerequisites: |
-    Открыт браузер Google Chrome
-    В браузере открыт инструмент Mobile-Friendly Test (https://www.experte.com/mobile-friendly)
+    Открыт онлайн-сервис BrowserStack
+    Выбрано ручное тестирование Manual Testing
+    Выбрано Cross-Browser Testing
   test-data: |
     URL тестируемого сайта https://hexlet-products-store.vercel.app/
+    Список браузеров для теста - Edge, Google Chrome, Yandex, Safari, Firefox, Opera, Internet Explorer
   steps:
-    - Вводим в строке "Enter URL" URL сайта https://hexlet-products-store.vercel.app/
-    - Нажать кнопку "Start Test"
+    - В открывшейся таблице сайтов нажимаеи на последнюю версию браузера Edge
+    - В открывшемся окне проверяем, что сайт загружается в данной версии браузера (текст и изображения загружаются, нет ошибок или пустой страницы)
+    - Повторить тесты для всех перечисленных браузеров в таблице поочередно
   expected-result: |
-   Результат теста должен быть - Mobile Friendly 
+   Сайт загружается на всех последних версиях браузеров Edge, Google Chrome, Yandex, Safari, Firefox, Opera, Internet Explorer
 
 
