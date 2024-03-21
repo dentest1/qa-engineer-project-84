@@ -117,7 +117,7 @@ expected-result: |
   requirement: |
     Сайт должен быть совместим с последними версиями браузеров для Windows и Mac
   prerequisites: |
-    Открыт онлайн-сервис BrowserStack
+    Открыт онлайн-сервис BrowserStack (https://live.browserstack.com/)
     Выбрано ручное тестирование Manual Testing
     Выбрано Cross-Browser Testing
   test-data: |
@@ -129,5 +129,37 @@ expected-result: |
     - Повторить тесты для всех перечисленных браузеров в таблице поочередно
   expected-result: |
    Сайт загружается на всех последних версиях браузеров Edge, Google Chrome, Yandex, Safari, Firefox, Opera, Internet Explorer
+
+- summary: |
+    Успешная адаптивность сайта на различных устройствах
+  requirement: |
+    Сайт должен быть доступен на различных устройствах
+  prerequisites: |
+    Открыта главная страница сайта в браузере Google Chrome
+  test-data: |
+    Устройства  для проверки - iPhone SE, iPhone 14 Pro Max, Samsung Galaxy A51/71, iPad, Asus Zenbook Fold
+  steps:
+    - Открыть DevTools клавишей F12
+    - Открыть вкладку Toogle device toolbar
+    - Выбрать поочередно устройства и убедиться в отображении сайта на них - iPhone SE, iPhone 14 Pro Max, Samsung Galaxy A51/71, iPad, Asus Zenbook Fold
+  expected-result: |
+    Пользователь должен увидеть, что сайт отображается на каждом устройстве, при этом изображения, кнопки и текст не наезжают друг на друга
+
+- summary: |
+    Успешная адаптивность сайта на различных устройствах
+  requirement: |
+    Сайт должен быть доступен на различных устройствах
+  prerequisites: |
+    Открыта главная страница сайта в браузере Google Chrome
+  test-data: |
+    Устройства  для проверки - iPhone SE, iPhone 14 Pro Max, Samsung Galaxy A51/71, iPad, Asus Zenbook Fold
+  steps:
+    - Открыть DevTools клавишей F12
+    - Открыть вкладку Toogle device toolbar
+    - Выбрать поочередно устройства и убедиться в отображении сайта на них - iPhone SE, iPhone 14 Pro Max, Samsung Galaxy A51/71, iPad, Asus Zenbook Fold
+  expected-result: |
+    Пользователь должен увидеть, что сайт отображается на каждом устройстве, при этом изображения, кнопки и текст не наезжают друг на друга
+
+
 
 
