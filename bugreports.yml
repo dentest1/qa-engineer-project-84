@@ -157,4 +157,22 @@
   actual-result: |
     При нажатии на дополнительные изображения ничего не происходит
 
+ - summary: |
+    Долгая загрузка контента LCP
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Вызвать DevTools клавишей F12
+    3. Нажать на вкладку Performance insights
+    4. Нажать на кнопку Measure page load
+    5. Зафиксировать значение LCP во вкладке Insights
+  expected-result: |
+    Значение LCP не превышает 2.5 секунд
+  actual-result: |
+    Значение LCP равно 14.54 секунды
+    Ошибка изображена на скриншоте LCPbug.png
+
+
 
