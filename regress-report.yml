@@ -36,7 +36,7 @@
   status: pass
   
 - summary: |
-    Успешная фильтрация товаров по наличию (In Stock)
+    Успешная фильтрация товаров по наличию 
   status: pass
 
 - summary: |
