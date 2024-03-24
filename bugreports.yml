@@ -174,5 +174,22 @@
     Значение LCP равно 14.54 секунды
     Ошибка изображена на скриншоте LCPbug.png
 
+- summary: |
+    Сайт не работает на последней версии браузера Internet Explorer (IE11)
+  environment: |
+    Internet Explorer (IE11)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Открыть браузер Internet Explorer (IE11)
+    2. Набрать в адресной строке https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+  expected-result: |
+    Сайт загружается на последней версии Internet Explorer (IE11)
+  actual-result: |
+    Сайт не загрузился
+    Отображается пустая страница
+    Ошибка показана на скриншоте IE11bug
+
+
+
 
 
