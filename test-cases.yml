@@ -22,7 +22,7 @@
   test-data: |
     Категория - laptops
     Искомый товар - Samsung Galaxy Book
-  steps: |
+  steps: 
     - Выбираем категорию 
     - Проверяем в открывшемся списке категории наличие искомого товара
   expected-result: |
@@ -36,7 +36,7 @@
     Открыта главная страница сайта  
   test-data: |
     Случайный товар - Tree Oil 30ml
-  steps: |
+  steps: 
     - Выбираем товар Tree Oil 30ml 
     - Проверяем на открывшейся странице наличие подробного описания и информации о товаре
   expected-result: |
@@ -51,7 +51,7 @@
     Открыта главная страница сайта  
   test-data: |
     Диапазон цены от 100 до 1000 у.е.
-  steps: |
+  steps: 
     - В строке Price вводим нижний показатель цены - 100
     - Вводим верхний показатель цены - 1000
   expected-result: |
@@ -65,7 +65,7 @@
     Открыта главная страница сайта  
   test-data: |
     Товары для добавления в корзину - Microsoft Surface Laptop 4,Brown Perfume,3D Embellishment Art Lamp
-  steps: |
+  steps: 
     - Найти на главной странице в списке товаров товар  Microsoft Surface Laptop 4
     - Нажать на кнопку Add to cart под товаром
     - Найти на главной странице в списке товаров товар Brown Perfume
@@ -85,7 +85,7 @@
   prerequisites: |
     Отключены антивирусные программы 
     Открыта главная страница сайта в браузере Google Chrome
-  steps: |
+  steps: 
     - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку "Performance insights"
     - Нажать на кнопку "Measure page load"
@@ -101,7 +101,7 @@
     Сайт должен быть безопасен для пользователя и защищать его данные
   prerequisites: |
     Открыта главная страница сайта в браузере Google Chrome
-  steps: |
+  steps: 
     - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку "Security"
     - В открывшемся окне "Security overview" проверяем, что сайт использует протокол HTTPS
