@@ -108,7 +108,7 @@
     - Выбираем вкладку "Security"
     - В открывшемся окне "Security overview" проверяем, что сайт использует протокол HTTPS
     - В открывшемся окне "Security overview" проверяем, что сертификат безопасности действующий
-expected-result: |
+ expected-result: |
     В окне "Security overview" должны увидеть надписи  This page is secure (valid HTTPS) 
     Сертификат подтвержден и действующий (Sertificate - valid and trusted)
     
