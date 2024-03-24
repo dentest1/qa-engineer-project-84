@@ -85,6 +85,8 @@
   prerequisites: |
     Отключены антивирусные программы 
     Открыта главная страница сайта в браузере Google Chrome
+  test-data: |
+    URL тестируемого сайта https://hexlet-products-store.vercel.app/
   steps: 
     - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку "Performance insights"
@@ -101,6 +103,8 @@
     Сайт должен быть безопасен для пользователя и защищать его данные
   prerequisites: |
     Открыта главная страница сайта в браузере Google Chrome
+  test-data: |
+    URL тестируемого сайта https://hexlet-products-store.vercel.app/
   steps: 
     - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку "Security"
