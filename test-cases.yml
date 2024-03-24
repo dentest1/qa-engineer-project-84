@@ -35,7 +35,7 @@
   prerequisites:
     Открыта главная страница сайта  
   test-data: |
-   Случайный товар - Tree Oil 30ml
+    Случайный товар - Tree Oil 30ml
   steps: |
     - Выбираем товар Tree Oil 30ml 
     - Проверяем на открывшейся странице наличие подробного описания и информации о товаре
@@ -50,7 +50,7 @@
   prerequisites:
     Открыта главная страница сайта  
   test-data: |
-   Диапазон цены от 100 до 1000 у.е.
+    Диапазон цены от 100 до 1000 у.е.
   steps: |
     - В строке Price вводим нижний показатель цены - 100
     - Вводим верхний показатель цены - 1000
@@ -64,7 +64,7 @@
   prerequisites: |
     Открыта главная страница сайта  
   test-data: |
-   Товары для добавления в корзину - Microsoft Surface Laptop 4,Brown Perfume,3D Embellishment Art Lamp
+    Товары для добавления в корзину - Microsoft Surface Laptop 4,Brown Perfume,3D Embellishment Art Lamp
   steps: |
     - Найти на главной странице в списке товаров товар - Microsoft Surface Laptop 4
     - Нажать на кнопку Add to cart под товаром
@@ -108,7 +108,7 @@
     - Выбираем вкладку "Security"
     - В открывшемся окне "Security overview" проверяем, что сайт использует протокол HTTPS
     - В открывшемся окне "Security overview" проверяем, что сертификат безопасности действующий
- expected-result: |
+  expected-result: |
     В окне "Security overview" должны увидеть надписи  This page is secure (valid HTTPS) 
     Сертификат подтвержден и действующий (Sertificate - valid and trusted)
     
@@ -125,7 +125,7 @@
     - Вводим в строке "Enter URL" URL сайта https://hexlet-products-store.vercel.app/
     - Нажать кнопку "Start Test"
   expected-result: |
-   Результат теста должен быть - Mobile Friendly 
+    Результат теста должен быть - Mobile Friendly 
    
 - summary: |
     Проверка совместимости сайта с последними версиями браузеров
@@ -143,7 +143,7 @@
     - В открывшемся окне проверяем, что сайт загружается в данной версии браузера (текст и изображения загружаются, нет ошибок или пустой страницы)
     - Повторить тесты для всех перечисленных браузеров в таблице поочередно
   expected-result: |
-   Сайт загружается на всех последних версиях браузеров Edge, Google Chrome, Yandex, Safari, Firefox, Opera, Internet Explorer
+    Сайт загружается на всех последних версиях браузеров Edge, Google Chrome, Yandex, Safari, Firefox, Opera, Internet Explorer
 
 - summary: |
     Успешная адаптивность сайта на различных устройствах
