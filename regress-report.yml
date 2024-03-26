@@ -107,21 +107,6 @@ bugreports:
       После выбора фильров по категории laptops и Price от 0 до 1000 отображаются все товары главной страницы
       Очередность выбора фильтров не влияет на конечный результат
 
-  - summary: |
-      Элементы списка товаров в корзине не выровнены по вертикали
-    environment: |
-      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
-      OC Windows 10
-    steps-to-reproduce: |
-      1. Открыть сайт https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Добавить первые 9 товаров с главной страницы в корзину
-      3. Открыть корзину
-    expected-result: |
-      В корзине отображается таблица со списком товаров,количеством на складе,количество товара в корзине,старая цена,кнопка Delete,цена 
-      Элементы таблицы выровнены относительно друг друга по вертикали
-    actual-result: |
-      Элементы - количество на складе, количество товара в корзине,старая цена и Delete не выровнены относительно друг друга по вертикали
-   
  - summary: |
      При добавлении товара в корзину отсутствует всплывающее уведомление
   environment: |
@@ -136,7 +121,22 @@ bugreports:
      При нажатии на кнопкку Add to cart не всплывает уведомление о добавлении товара в корзину
 
 - summary: |
-    Не работает ссылка перехода со страницы товара в категорию  
+    Не работает ссылка #tops
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Выбрать товар Sleeve Shirt Womens
+    4. В открывшемся окне товара нажать на ссылку #tops
+  expected-result: |
+    Полсе нажатия на ссылку #tops пользователь переходит в категорию tops
+  actual-result: |
+    При нажатии на ссылку #tops открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #mens-shirts 
   environment: |
     Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
     ОС Windows 10
@@ -151,7 +151,178 @@ bugreports:
     При нажатии на ссылку #mens-shirts открывается главная страница сайта
 
 - summary: |
-    При переходе на следующую страницу, она не всегла отображается сверху 
+    Не работает ссылка #womens-dresses
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Выбрать товар Malai Maxi Dress
+    4. В открывшемся окне товара нажать на ссылку #womens-dresses
+  expected-result: |
+    Полсе нажатия на ссылку #womens-dresses пользователь переходит в категорию womens-dresses
+  actual-result: |
+    При нажатии на ссылку #womens-dresses открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #womens-shoes
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Выбрать товар women's shoes
+    4. В открывшемся окне товара нажать на ссылку #womens-shoes
+  expected-result: |
+    Полсе нажатия на ссылку #womens-shoes пользователь переходит в категорию womens-shoes
+  actual-result: |
+    При нажатии на ссылку #womens-shoes открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #mens-shoes
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Выбрать товар Sneakers Joggers Shoes
+    4. В открывшемся окне товара нажать на ссылку #mens-shoes
+  expected-result: |
+    Полсе нажатия на ссылку #mens-shoes пользователь переходит в категорию mens-shoes
+  actual-result: |
+    При нажатии на ссылку #mens-shoes открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #mens-watches
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Снова нажать Next 
+    4. Выбрать товар Leather Straps Wristwatch
+    5. В открывшемся окне товара нажать на ссылку #mens-watches
+  expected-result: |
+    Полсе нажатия на ссылку #mens-watches пользователь переходит в категорию mens-watches
+  actual-result: |
+    При нажатии на ссылку #mens-watches открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #womens-watches
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Снова нажать Next 
+    4. Выбрать товар Fashion Magnetic Wrist Watch
+    5. В открывшемся окне товара нажать на ссылку #womens-watches
+  expected-result: |
+    Полсе нажатия на ссылку #womens-watches пользователь переходит в категорию womens-watches
+  actual-result: |
+    При нажатии на ссылку #womens-watches открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #womens-bags
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Снова нажать Next 
+    4. Выбрать товар Women Shoulder Bags
+    5. В открывшемся окне товара нажать на ссылку #womens-bags
+  expected-result: |
+    Полсе нажатия на ссылку #womens-bags пользователь переходит в категорию womens-bags
+  actual-result: |
+    При нажатии на ссылку #womens-bags открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #womens-jewellery
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Снова нажать Next 
+    4. Выбрать товар Rose Ring
+    5. В открывшемся окне товара нажать на ссылку #womens-jewellery
+  expected-result: |
+    Полсе нажатия на ссылку #womens-jewellery пользователь переходит в категорию womens-jewellery
+  actual-result: |
+    При нажатии на ссылку #womens-jewellery открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #sunglasses
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Снова нажать Next 
+    4. Выбрать товар Kabir Singh Square Sunglass
+    5. В открывшемся окне товара нажать на ссылку #sunglasses
+  expected-result: |
+    Полсе нажатия на ссылку #sunglasses пользователь переходит в категорию sunglasses
+  actual-result: |
+    При нажатии на ссылку #sunglasses открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #automotive
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Снова нажать Next 
+    4. Выбрать товар Bluetooth Aux
+    5. В открывшемся окне товара нажать на ссылку #automotive
+  expected-result: |
+    Полсе нажатия на ссылку #automotive пользователь переходит в категорию automotive
+  actual-result: |
+    При нажатии на ссылку #automotive открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #motorcycle
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 3 раза
+    3. Выбрать товар Black Motorbike
+    4. В открывшемся окне товара нажать на ссылку #motorcycle
+  expected-result: |
+    Полсе нажатия на ссылку #motorcycle пользователь переходит в категорию motorcycle
+  actual-result: |
+    При нажатии на ссылку #motorcycle открывается главная страница сайта
+
+- summary: |
+    Не работает ссылка #lighting
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Нажать на кнопку Next 3 раза
+    3. Выбрать товар lighting ceiling kitchen
+    4. В открывшемся окне товара нажать на ссылку #lighting
+  expected-result: |
+    Полсе нажатия на ссылку #lighting пользователь переходит в категорию lighting
+  actual-result: |
+    При нажатии на ссылку #lighting открывается главная страница сайта
+
+- summary: |
+    При переходе на следующую страницу, она не отображается сверху 
   environment: |
     Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
     ОС Windows 10
@@ -179,4 +350,19 @@ bugreports:
     После выбора Русский во вкладке Language описание товаров остается на английском языке
     Ошибка изображена на скриншоте languagebug.png
 
+- summary: |
+    В всплывающем окне заказа кнопка закрытия окна X не работает 
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Добавить любой товар в корзину кнопкой Add to card
+    3. Нажать на кнопку Cart
+    4. Нажать на кнопку Checkout
+  expected-result: |
+    После совершения заказа пользоваетль может закрыть всплывающее окно заказа кнопкой X
+  actual-result: |
+    Кнопка X не работает
+    Кнопка X дублирует рабочую кнопку Close и может вводить пользователя в заблуждение
       
