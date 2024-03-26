@@ -109,15 +109,15 @@ bugreports:
 
  - summary: |
      При добавлении товара в корзину отсутствует всплывающее уведомление
-  environment: |
+   environment: |
      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
      ОС Windows 10
-  steps-to-reproduce: |
+   steps-to-reproduce: |
      1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
      2. Выбрать товар любой товар и нажать Add to cart
-  expected-result: |
+   expected-result: |
      При добавлении товара в корзину пользователь видит всплывающее уведомление, подтверждающее добавление товара в корзину
-  actual-result: |
+   actual-result: |
      При нажатии на кнопкку Add to cart не всплывает уведомление о добавлении товара в корзину
 
 - summary: |
