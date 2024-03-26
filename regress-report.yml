@@ -128,7 +128,7 @@ bugreports:
      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
      ОС Windows 10
   steps-to-reproduce: |
-     1. Зайти на страницу https://hexlet-products-store.vercel.app/
+     1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
      2. Выбрать товар любой товар и нажать Add to cart
   expected-result: |
      При добавлении товара в корзину пользователь видит всплывающее уведомление, подтверждающее добавление товара в корзину
@@ -141,7 +141,7 @@ bugreports:
     Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
     ОС Windows 10
   steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
     2. Нажать на кнопку Next 
     3. Выбрать товар Pubg Printed Graphic T-Shirt
     4. В открывшемся окне товара нажать на ссылку #mens-shirts
@@ -151,18 +151,32 @@ bugreports:
     При нажатии на ссылку #mens-shirts открывается главная страница сайта
 
 - summary: |
-    При переходе на следующую страницу , она открывается снизу 
+    При переходе на следующую страницу, она не всегла отображается сверху 
   environment: |
     Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
     ОС Windows 10
   steps-to-reproduce: |
-    1. Зайти на страницу https://hexlet-products-store.vercel.app/
-    2. Пролистать товары вниз 
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Пролистать страницу вниз 
     3. Нажать на кнопку Next
   expected-result: |
     При переходе на следующую страницу она отображается с начала (сверху)
   actual-result: |
-    При переходе на следующую страницу она отображается с конца (снизу)
-
+    При переходе на следующую страницу она отображается снизу
+    Происходит запоминание относительного положения на странице
+    
+- summary: |
+    При смене языка на Русский описание товаров остается на английском языке
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Выбрать Русский во вкладке Language
+  expected-result: |
+    После выбора Русский во вкладке Language пользователь видит описание товаров на русском языке
+  actual-result: |
+    После выбора Русский во вкладке Language описание товаров остается на английском языке
+    Ошибка изображена на скриншоте languagebug.png
 
       
