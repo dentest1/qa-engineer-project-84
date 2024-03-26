@@ -135,4 +135,20 @@ bugreports:
   actual-result: |
      При нажатии на кнопкку Add to cart не всплывает уведомление о добавлении товара в корзину
 
+- summary: |
+    Не работает ссылка перехода со страницы товара в категорию  
+  environment: |
+    Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+    ОС Windows 10
+  steps-to-reproduce: |
+    1. Зайти на страницу https://hexlet-products-store.vercel.app/
+    2. Нажать на кнопку Next 
+    3. Выбрать товар Pubg Printed Graphic T-Shirt
+    4. В открывшемся окне товара нажать на ссылку #mens-shirts
+  expected-result: |
+    Полсе нажатия на ссылку #mens-shirts пользователь переходит в категорию mens-shirts
+  actual-result: |
+    При нажатии на ссылку #mens-shirts открывается главная страница сайта
+   
+
       
