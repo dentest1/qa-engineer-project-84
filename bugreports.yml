@@ -218,7 +218,7 @@
     ОС Windows 10
   steps-to-reproduce: |
     1. Открыть браузер Internet Explorer (IE11)
-    2. Набрать в адресной строке https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+    2. Набрать в адресной строке https://hexlet-products-store.vercel.app/
   expected-result: |
     Сайт загружается на последней версии Internet Explorer (IE11)
   actual-result: |
@@ -226,3 +226,20 @@
     Отображается пустая страница
     Ошибка показана на скриншоте IE11bug
 
+- summary: |
+    На мобильной версии сайта едет верстка
+  environment: |
+    Google Chrome 123.0.6312.80
+    Android 12
+    Xiaomi Redmi Note 10
+  steps-to-reproduce: |
+    1. Открыть браузер Google Chrome
+    2. Набрать в адресной строке https://hexlet-products-store.vercel.app/
+  expected-result: |
+    При загрузке страницы элементы на ней не смещаются, не заходят друг на друга. 
+  actual-result: |
+    Строка посика сместилась под кнопки Previous/Next
+    Отсутствуют промежутки между цена/цена со скидкой/наличие в карточках товаров на главной странице
+    В фильтре цена отображается только одна цифра
+    Ошибки на скриншоте Mobile-bug.png
+    
