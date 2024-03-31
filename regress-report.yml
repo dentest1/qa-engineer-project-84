@@ -411,7 +411,7 @@ bugreports:
       Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
       ОС Windows 10
     steps-to-reproduce: |
-      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+      1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
       2. Нажать на вкладку Category
       3. Выбрать категорию mens-shirts
       4. Нажать на товар "FREE FIRE T Shirt"
@@ -428,7 +428,7 @@ bugreports:
       ОС Windows 10
     steps-to-reproduce: |
       1. Открыть браузер Internet Explorer (IE11)
-      2. Набрать в адресной строке https://hexlet-products-store.vercel.app/
+      2. Набрать в адресной строке https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
     expected-result: |
       Сайт загружается на последней версии Internet Explorer (IE11)
     actual-result: |
@@ -436,17 +436,17 @@ bugreports:
       Отображается пустая страница
 
   - summary: |
-      На мобильной версии сайта пропало меню фильтров
+      На мобильной версии сайта пропало боковое меню фильтров и строка поиска
     environment: |
-      Internet Explorer (IE11)
-      ОС Windows 10
+      Google Chrome 123.0.6312.80
+      Android 12
+      Xiaomi Redmi Note 10
     steps-to-reproduce: |
-      1. Открыть браузер Internet Explorer (IE11)
-      2. Набрать в адресной строке https://hexlet-products-store.vercel.app/
+      1. Открыть браузер Google Chrome
+      2. Набрать в адресной строке https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
     expected-result: |
-      Сайт загружается на последней версии Internet Explorer (IE11)
+      При загрузке страницы элементы на ней не пропадают, не смещаются, не заходят друг на друга. 
     actual-result: |
-      Сайт не загрузился
-      Отображается пустая страница
-      
+      Меню фильтров по категории,цене,производителю исчезло
+      Строка поиска исчезла
 
