@@ -320,21 +320,6 @@ bugreports:
       Полсе нажатия на ссылку #lighting пользователь переходит в категорию lighting
     actual-result: |
       При нажатии на ссылку #lighting открывается главная страница сайта
-
-  - summary: |
-      При переходе на следующую страницу, она не отображается сверху 
-    environment: |
-      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
-      ОС Windows 10
-    steps-to-reproduce: |
-      1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
-      2. Пролистать страницу вниз 
-      3. Нажать на кнопку Next
-    expected-result: |
-      При переходе на следующую страницу она отображается с начала (сверху)
-    actual-result: |
-      При переходе на следующую страницу она отображается снизу
-      Происходит запоминание относительного положения на странице
     
   - summary: |
       При смене языка на Русский описание товаров остается на английском языке
@@ -365,4 +350,103 @@ bugreports:
     actual-result: |
       Кнопка X не работает
       Кнопка X дублирует рабочую кнопку Close и может вводить пользователя в заблуждение
+
+  - summary: |
+      Не выводит полный список категорий 
+    environment: |
+      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Нажать на вкладку Category
+    expected-result: |
+      В открывшейся вкладке отображается полный список категорий или есть возможность пролистать список
+    actual-result: |
+      В открывшейся вкладке отображается только 6 категорий (из 20)
+
+  - summary: |
+      При добавлении товара в корзину отсутствует всплывающее уведомление
+    environment: |
+      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Выбрать любой товар и нажать Add to cart
+    expected-result: |
+      При добавлении товара в корзину пользователь видит всплывающее уведомление, подтверждающее добавление товара в корзину
+    actual-result: |
+      При нажатии на кнопкку Add to cart не всплывает уведомление о добавлении товара в корзину
+   
+  - summary: |
+      Переход на следующую страницу происходит с запоминанием положения на предыдущей 
+    environment: |
+      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. Пролистать товары вниз до футера страницы
+      3. Нажать на кнопку Next
+    expected-result: |
+      При переходе на следующую страницу она отображается с начала (сверху)
+    actual-result: |
+      При переходе на следующую страницу она отображается с конца (снизу)
+      Происходит запоминание положения на странице
+    
+  - summary: |
+      При вводе числа в фильтре Price можно ввести отрицательное значение
+    environment: |
+      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Зайти на страницу https://products-store-git-v2bugfixes-hexlet-components.vercel.app/
+      2. В строке Price в нижнем и верхнем показателе ввести отрицательные значения -10 и - 1000
+    expected-result: |
+      При фильтрации товаров по цене не возможно ввести отрицательные значения
+    actual-result: |
+      В строке Price в нижнем показателе отображается -10 и в верхнем -1000
       
+  - summary: |
+      Изображения товара "FREE FIRE T Shirt" не соответствуют категории и названию товара
+    environment: |
+      Google Chrome 123.0.6312.59 (Официальная сборка), (64 бит)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Зайти на страницу https://hexlet-products-store.vercel.app/
+      2. Нажать на вкладку Category
+      3. Выбрать категорию mens-shirts
+      4. Нажать на товар "FREE FIRE T Shirt"
+    expected-result: |
+      Согласно названию товара на изображении пользователь видит мужскую футболку
+    actual-result: |
+      На главном изображении товара женская футболка
+      На дополнительных изображениях отображены товары, не являющиеся футболкой
+
+  - summary: |
+      Сайт не работает на последней версии браузера Internet Explorer (IE11)
+    environment: |
+      Internet Explorer (IE11)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Открыть браузер Internet Explorer (IE11)
+      2. Набрать в адресной строке https://hexlet-products-store.vercel.app/
+    expected-result: |
+      Сайт загружается на последней версии Internet Explorer (IE11)
+    actual-result: |
+      Сайт не загрузился
+      Отображается пустая страница
+
+  - summary: |
+      На мобильной версии сайта пропало меню фильтров
+    environment: |
+      Internet Explorer (IE11)
+      ОС Windows 10
+    steps-to-reproduce: |
+      1. Открыть браузер Internet Explorer (IE11)
+      2. Набрать в адресной строке https://hexlet-products-store.vercel.app/
+    expected-result: |
+      Сайт загружается на последней версии Internet Explorer (IE11)
+    actual-result: |
+      Сайт не загрузился
+      Отображается пустая страница
+      
+
