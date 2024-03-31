@@ -16,6 +16,10 @@
   status: pass
 
 - summary: |
+    Успешная фильтрация товаров по производителю
+  status: pass
+  
+- summary: |
     Проверка добавления товаров в корзину 
   status: pass
 
